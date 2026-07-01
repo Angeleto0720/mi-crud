@@ -6,6 +6,7 @@ import "./index.css";
 function App() {
   const [personas, setPersonas] = useState([]);
   const [personaEditar, setPersonaEditar] = useState(null);
+  const [busqueda, setBusqueda] = useState("");
 
   // Crear o actualizar
   const guardarPersona = (persona) => {
@@ -46,7 +47,7 @@ function App() {
     alert(`Hay ${personas.length} persona(s) registradas.`);
   };
 
-  // Eliminar todas las personas
+  // Eliminar todo
   const eliminarTodo = () => {
     if (personas.length === 0) {
       alert("No hay personas para eliminar.");
@@ -59,6 +60,13 @@ function App() {
     }
   };
 
+  // 🔍 FILTRO DE BÚSQUEDA
+  const personasFiltradas = personas.filter((p) =>
+    `${p.nombre} ${p.apellido} ${p.correo}`
+      .toLowerCase()
+      .includes(busqueda.toLowerCase())
+  );
+
   return (
     <div className="container">
       <h1>📋 CRUD de Personas</h1>
@@ -66,6 +74,15 @@ function App() {
       <Form
         guardarPersona={guardarPersona}
         personaEditar={personaEditar}
+      />
+
+      {/* 🔍 BUSCADOR */}
+      <input
+        type="text"
+        placeholder="Buscar persona..."
+        value={busqueda}
+        onChange={(e) => setBusqueda(e.target.value)}
+        className="buscador"
       />
 
       <div className="acciones">
@@ -79,7 +96,7 @@ function App() {
       </div>
 
       <List
-        personas={personas}
+        personas={personasFiltradas}
         editarPersona={editarPersona}
         eliminarPersona={eliminarPersona}
       />
