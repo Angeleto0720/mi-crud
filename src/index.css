@@ -124,3 +124,38 @@ body {
 .eliminar:hover {
   background: #b02a37;
 }
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contar {
+  background: #17a2b8;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contar:hover {
+  background: #138496;
+}
+
+.vaciar {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vaciar:hover {
+  background: #5a6268;
+}
