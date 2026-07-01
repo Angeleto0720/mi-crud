@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f3f5f9;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.container {
+  width: 750px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.formulario input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.formulario button {
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario button:hover {
+  background: #0056b3;
+}
+
+.lista {
+  margin-top: 30px;
+}
+
+.lista h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.mensaje {
+  text-align: center;
+  color: gray;
+  font-style: italic;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  border-left: 5px solid #007bff;
+  padding: 18px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.datos h3 {
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.datos p {
+  margin: 5px 0;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+}
+
+.botones button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.editar {
+  background: #28a745;
+}
+
+.editar:hover {
+  background: #1f8a37;
+}
+
+.eliminar {
+  background: #dc3545;
+}
+
+.eliminar:hover {
+  background: #b02a37;
+}
